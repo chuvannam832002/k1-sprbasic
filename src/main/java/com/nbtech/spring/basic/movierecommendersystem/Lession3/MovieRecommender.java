@@ -1,11 +1,13 @@
 package com.nbtech.spring.basic.movierecommendersystem.Lession3;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MovieRecommender {
     @Autowired
+            @Qualifier("CDF")
     MovieFilter movieFilter;
 
     public MovieRecommender(MovieFilter movieFilter) {
